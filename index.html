@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Digital Flow Global — AI Growth for Service Businesses</title>
+<title>Digital Flow Global â€” AI Growth for Service Businesses</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23020203'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='13' fill='%231560ff' letter-spacing='-0.5'%3EDFG%3C/text%3E%3C/text%3E%3C/svg%3E"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
-/* ════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    TOKENS  (skill: Modern Dark Cinema + Trust & Authority)
-════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 :root {
   /* Brand */
   --blue:     #1560ff;
@@ -43,17 +43,17 @@
   --fd: 'Syne', sans-serif;
   --fb: 'Space Grotesk', sans-serif;
 
-  /* Easing — skill: cubic-bezier(0.16,1,0.3,1) */
+  /* Easing â€” skill: cubic-bezier(0.16,1,0.3,1) */
   --ease: cubic-bezier(.16,1,.3,1);
   --ease-out: cubic-bezier(.2,.8,.3,1);
 
-  /* Radius — skill: 16px cards */
+  /* Radius â€” skill: 16px cards */
   --r-card: 16px;
   --r-btn:  6px;
   --r-sm:   8px;
 }
 
-/* ── RESET ── */
+/* â”€â”€ RESET â”€â”€ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
@@ -70,12 +70,12 @@ body.loading{overflow:hidden}
 ::-webkit-scrollbar-thumb{background:var(--blue)}
 a{color:inherit;text-decoration:none}
 
-/* prefers-reduced-motion — skill requirement */
+/* prefers-reduced-motion â€” skill requirement */
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
 
-/* ── AMBIENT BLOBS (skill: slow oscillation, opacity 0.08–0.12) ── */
+/* â”€â”€ AMBIENT BLOBS (skill: slow oscillation, opacity 0.08â€“0.12) â”€â”€ */
 .blob{
   position:fixed;border-radius:50%;pointer-events:none;z-index:0;
   filter:blur(90px);animation:blob-drift 18s ease-in-out infinite;
@@ -90,13 +90,13 @@ a{color:inherit;text-decoration:none}
   66%{transform:translate(-25px,40px) scale(.96)}
 }
 
-/* ── CURSOR ── */
+/* â”€â”€ CURSOR â”€â”€ */
 #cur{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;width:8px;height:8px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:transform .15s var(--ease)}
 #cur2{position:fixed;top:0;left:0;z-index:9998;pointer-events:none;width:36px;height:36px;border-radius:50%;border:1px solid rgba(21,96,255,.45);transform:translate(-50%,-50%);transition:width .3s var(--ease),height .3s var(--ease),opacity .3s,border-color .3s}
 body:has(a:hover,button:hover) #cur{transform:translate(-50%,-50%) scale(3.5);background:rgba(21,96,255,.6)}
 body:has(a:hover,button:hover) #cur2{opacity:0}
 
-/* ── PRELOADER ── */
+/* â”€â”€ PRELOADER â”€â”€ */
 #loader{position:fixed;inset:0;z-index:8000;background:var(--bg-deep);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity .7s var(--ease),transform .9s var(--ease)}
 #loader.out{opacity:0;transform:translateY(-8px);pointer-events:none}
 .ldr-pct{font-family:var(--fd);font-weight:800;font-size:clamp(5rem,12vw,9rem);letter-spacing:-.05em;background:linear-gradient(135deg,#fff 30%,var(--blue-lt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
@@ -104,7 +104,7 @@ body:has(a:hover,button:hover) #cur2{opacity:0}
 .ldr-bar{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));transition:width .04s linear}
 .ldr-label{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--fg-muted)}
 
-/* ── NAV ── */
+/* â”€â”€ NAV â”€â”€ */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
@@ -125,12 +125,12 @@ nav.scrolled{background:rgba(2,2,3,.85);backdrop-filter:blur(24px);border-color:
   box-shadow:0 0 0 0 var(--glow-blue);
 }
 .nav-cta:hover{box-shadow:0 0 28px rgba(21,96,255,.55);transform:translateY(-1px)}
-/* skill: scale press 0.97 → 1.0 */
+/* skill: scale press 0.97 â†’ 1.0 */
 .nav-cta:active{transform:scale(.97)}
 
-/* ═══════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    HERO
-═══════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #hero{
   position:relative;width:100vw;height:100vh;min-height:620px;
   overflow:hidden;display:flex;align-items:flex-end;justify-content:flex-start;
@@ -186,7 +186,7 @@ nav.scrolled{background:rgba(2,2,3,.85);backdrop-filter:blur(24px);border-color:
 .btn-care:active{transform:scale(.97)}
 .hero-trust{font-size:.67rem;color:rgba(255,255,255,.3);letter-spacing:.06em}
 
-/* Buttons — skill: scale .97 on press, glow on primary */
+/* Buttons â€” skill: scale .97 on press, glow on primary */
 .btn-primary{
   display:inline-flex;align-items:center;gap:8px;
   padding:13px 28px;border-radius:var(--r-btn);
@@ -213,9 +213,9 @@ nav.scrolled{background:rgba(2,2,3,.85);backdrop-filter:blur(24px);border-color:
 .s-line{width:1px;height:48px;background:linear-gradient(180deg,rgba(255,255,255,.55),transparent);animation:s-pulse 2.4s ease-in-out infinite}
 @keyframes s-pulse{0%,100%{opacity:.35}50%{opacity:1}}
 
-/* ═══════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    SHARED SECTION UTILITIES
-═══════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
 .reveal.in{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
@@ -227,7 +227,7 @@ section{padding:96px 6%;position:relative;z-index:1}
 .h2{font-family:var(--fd);font-weight:800;font-size:clamp(2rem,4vw,3.6rem);letter-spacing:-.04em;line-height:1.02}
 .sec-div{border:none;border-top:1px solid var(--border);margin:0}
 
-/* Glassmorphism card base — skill: blur, rgba border, 16px radius */
+/* Glassmorphism card base â€” skill: blur, rgba border, 16px radius */
 .glass{
   background:rgba(255,255,255,.04);
   backdrop-filter:blur(14px);
@@ -238,14 +238,14 @@ section{padding:96px 6%;position:relative;z-index:1}
 }
 .glass:hover{background:rgba(255,255,255,.07);border-color:var(--border-hi)}
 
-/* ── MARQUEE ── */
+/* â”€â”€ MARQUEE â”€â”€ */
 .mq-wrap{overflow:hidden;padding:13px 0;background:rgba(7,8,15,.9);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;z-index:1}
 .mq-track{display:flex;width:max-content;animation:mq 28s linear infinite}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .mq-i{padding:0 26px;font-size:.67rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.18);white-space:nowrap}
 .mq-i.hi{color:var(--blue-mid)}
 
-/* ── STATS ── */
+/* â”€â”€ STATS â”€â”€ */
 #stats{background:rgba(7,8,15,.6);padding:0}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .stat-cell{padding:52px 40px;border-right:1px solid var(--border);position:relative;overflow:hidden;cursor:default}
@@ -255,7 +255,7 @@ section{padding:96px 6%;position:relative;z-index:1}
 .stat-num{font-family:var(--fd);font-weight:800;font-size:clamp(2.8rem,5.5vw,5rem);letter-spacing:-.05em;line-height:1;background:linear-gradient(135deg,#fff 25%,var(--blue-lt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px}
 .stat-lbl{font-size:.78rem;color:var(--fg-muted);line-height:1.55;max-width:140px;font-weight:400}
 
-/* ── PROBLEMS ── */
+/* â”€â”€ PROBLEMS â”€â”€ */
 #problems{background:var(--bg-base)}
 .prob-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
 .prob-left{}
@@ -270,7 +270,7 @@ section{padding:96px 6%;position:relative;z-index:1}
 .prob-icon{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:7px;box-shadow:0 0 8px var(--blue)}
 .prob-text{font-size:.84rem;color:rgba(255,255,255,.6);line-height:1.65}
 
-/* ── SOLUTION CARDS (glassmorphism) ── */
+/* â”€â”€ SOLUTION CARDS (glassmorphism) â”€â”€ */
 #solution{background:var(--bg-deep)}
 .sol-intro{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:60px;align-items:end}
 .sol-desc{font-size:.88rem;color:var(--fg-muted);line-height:1.82}
@@ -281,7 +281,7 @@ section{padding:96px 6%;position:relative;z-index:1}
 .sol-title{font-family:var(--fd);font-weight:800;font-size:1.1rem;letter-spacing:-.02em;margin-bottom:12px}
 .sol-desc-c{font-size:.8rem;color:var(--fg-muted);line-height:1.68}
 
-/* ── HOW IT WORKS ── */
+/* â”€â”€ HOW IT WORKS â”€â”€ */
 #how-it-works{background:var(--bg-base)}
 .steps-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--border);border-radius:var(--r-card);overflow:hidden;margin-top:52px}
 .step{background:var(--bg-elevated);padding:44px 32px;position:relative}
@@ -290,7 +290,7 @@ section{padding:96px 6%;position:relative;z-index:1}
 .step-title{font-family:var(--fd);font-weight:800;font-size:.98rem;letter-spacing:-.01em;margin-bottom:12px;line-height:1.3}
 .step-desc{font-size:.8rem;color:var(--fg-muted);line-height:1.68}
 
-/* ── SERVICES (6 cards) ── */
+/* â”€â”€ SERVICES (6 cards) â”€â”€ */
 #services{background:var(--bg-deep)}
 .svc-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:52px}
 .svc-note{max-width:260px;font-size:.82rem;color:var(--fg-muted);line-height:1.65;text-align:right}
@@ -306,7 +306,7 @@ section{padding:96px 6%;position:relative;z-index:1}
 .svc-arr{position:absolute;bottom:28px;right:32px;font-size:1.1rem;color:var(--blue-mid);opacity:0;transform:translateX(-6px);transition:opacity .25s,transform .25s var(--ease)}
 .svc-card:hover .svc-arr{opacity:1;transform:translateX(0)}
 
-/* ── TRUST STRIP (skill: Trust & Authority — credentials + metrics) ── */
+/* â”€â”€ TRUST STRIP (skill: Trust & Authority â€” credentials + metrics) â”€â”€ */
 #trust{background:rgba(21,96,255,.04);border-top:1px solid rgba(21,96,255,.12);border-bottom:1px solid rgba(21,96,255,.12);padding:52px 6%}
 .trust-grid{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;max-width:1200px;margin:0 auto}
 .trust-item{display:flex;align-items:center;gap:14px}
@@ -315,7 +315,7 @@ section{padding:96px 6%;position:relative;z-index:1}
 .trust-text strong{display:block;font-size:.85rem;font-weight:600;color:var(--fg);margin-bottom:2px}
 .trust-text span{font-size:.72rem;color:var(--fg-muted)}
 
-/* ── PRICING ── */
+/* â”€â”€ PRICING â”€â”€ */
 #pricing{background:var(--bg-base)}
 .price-head{margin-bottom:52px}
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -323,7 +323,7 @@ section{padding:96px 6%;position:relative;z-index:1}
 .pc.feat{border-color:rgba(21,96,255,.28)}
 .pc.feat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--blue) 30%,var(--cyan) 70%,transparent)}
 .feat-badge{display:inline-flex;align-items:center;gap:5px;font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:16px}
-.feat-badge::before{content:'★';font-size:.5rem}
+.feat-badge::before{content:'â˜…';font-size:.5rem}
 .pc-tier{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-dim);margin-bottom:5px}
 .pc-name{font-family:var(--fd);font-weight:800;font-size:1.5rem;letter-spacing:-.02em;margin-bottom:22px}
 .pc-price{display:flex;align-items:baseline;gap:4px;margin-bottom:4px}
@@ -342,7 +342,7 @@ section{padding:96px 6%;position:relative;z-index:1}
 .btn-plan-out:hover{border-color:var(--border-hi);color:var(--fg)}
 .btn-plan-out:active{transform:scale(.97)}
 
-/* ── AI CTA ── */
+/* â”€â”€ AI CTA â”€â”€ */
 #ai-cta{
   background:var(--bg-deep);
   padding:110px 6%;text-align:center;position:relative;overflow:hidden;
@@ -357,7 +357,7 @@ section{padding:96px 6%;position:relative;z-index:1}
 .ai-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
 .ai-fine{font-size:.68rem;color:var(--fg-dim);letter-spacing:.07em}
 
-/* ── FOOTER ── */
+/* â”€â”€ FOOTER â”€â”€ */
 footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60px 6% 36px;position:relative;z-index:1}
 .ft{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
 .ft-brand{font-family:var(--fd);font-weight:800;font-size:.88rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
@@ -370,11 +370,11 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
 .ft-copy{font-size:.7rem;color:var(--fg-dim)}
 .ft-wm{font-family:var(--fd);font-weight:800;font-size:clamp(4rem,10vw,10rem);letter-spacing:-.05em;line-height:1;color:rgba(255,255,255,.018);text-align:center;margin-top:32px;user-select:none;pointer-events:none}
 
-/* ── MODAL ── */
+/* â”€â”€ MODAL â”€â”€ */
 .modal-backdrop{position:fixed;inset:0;z-index:500;background:rgba(2,2,3,.92);backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
 .modal-backdrop.open{opacity:1;pointer-events:all}
 
-/* ── SCHEDULE MODAL ── */
+/* â”€â”€ SCHEDULE MODAL â”€â”€ */
 .sched-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px}
 .sched-slot{padding:9px 6px;border-radius:var(--r-sm);border:1px solid var(--border-hi);background:rgba(255,255,255,.03);font-size:.7rem;font-weight:600;color:var(--fg-muted);cursor:pointer;text-align:center;transition:all .2s}
 .sched-slot:hover{border-color:rgba(21,96,255,.5);color:#fff;background:rgba(21,96,255,.08)}
@@ -417,7 +417,7 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
 .f-submit:active{transform:scale(.97)}
 .f-fine{font-size:.65rem;color:var(--fg-dim);text-align:center;margin-top:10px;letter-spacing:.05em}
 
-/* ── RESPONSIVE ── */
+/* â”€â”€ RESPONSIVE â”€â”€ */
 @media(max-width:1024px){
   .sol-grid,.steps-wrap{grid-template-columns:1fr 1fr}
   .step+.step{border-left:none;border-top:1px solid var(--border)}
@@ -453,7 +453,7 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
   .nav-brand{font-size:.68rem;letter-spacing:.06em}
   .nav-cta{padding:8px 14px;font-size:.62rem;letter-spacing:.08em}
 
-  /* Hero — full screen fill */
+  /* Hero â€” full screen fill */
   #hero{
     height:100dvh;
     height:100svh; /* fallback for older mobile browsers */
@@ -468,7 +468,7 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
     height:100%;
   }
 
-  /* Hero content — centered, full width */
+  /* Hero content â€” centered, full width */
   #hero-content{
     left:0;right:0;
     transform:none;
@@ -487,7 +487,7 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
   /* Bottom fade taller so buttons are readable */
   #bot-fade{height:320px}
 
-  /* Scroll cue — hide on mobile to save space */
+  /* Scroll cue â€” hide on mobile to save space */
   #scroll-cue{display:none}
 
   /* Sections */
@@ -543,7 +543,7 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
   <button class="nav-cta open-form">Get My Free Plan</button>
 </nav>
 
-<!-- ═══ HERO ═══ -->
+<!-- â•â•â• HERO â•â•â• -->
 <section id="hero">
   <img id="hero-photo" src="./dfg-hero.jpg" alt="Digital Flow Global"/>
   <img id="hero-photo-mobile" src="https://raw.githubusercontent.com/yperez-dfg/DFG-site-1/main/dfg-hero-mobile.jpg" alt="Digital Flow Global"/>
@@ -566,7 +566,7 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
 <!-- Marquee -->
 <div class="mq-wrap"><div class="mq-track" id="mq1"></div></div>
 
-<!-- ═══ SOLUTION ═══ -->
+<!-- â•â•â• SOLUTION â•â•â• -->
 <section id="solution">
   <hr class="sec-div"/>
   <div class="cap" style="padding-top:80px">
@@ -575,34 +575,34 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
         <div class="lbl reveal">The Solution</div>
         <h2 class="h2 reveal d1">A smarter customer flow, built with AI.</h2>
       </div>
-      <p class="sol-desc reveal d2">We connect the most important parts of your customer journey — website, calls, booking, forms, and follow-up — into one clean system that captures leads, responds faster, and moves customers toward action.</p>
+      <p class="sol-desc reveal d2">We connect the most important parts of your customer journey â€” website, calls, booking, forms, and follow-up â€” into one clean system that captures leads, responds faster, and moves customers toward action.</p>
     </div>
     <div class="sol-grid">
       <div class="sol-card glass reveal">
         <div class="sol-num">01</div>
         <div class="sol-title">Modern Website</div>
-        <p class="sol-desc-c">A professional site built to build trust and convert visitors into leads — with a clear next step and booking built in.</p>
+        <p class="sol-desc-c">A professional site built to build trust and convert visitors into leads â€” with a clear next step and booking built in.</p>
       </div>
       <div class="sol-card glass reveal d1">
         <div class="sol-num">02</div>
         <div class="sol-title">AI Receptionist</div>
-        <p class="sol-desc-c">An AI agent that answers calls, qualifies leads, and helps customers take the next step — 24 hours a day, 7 days a week.</p>
+        <p class="sol-desc-c">An AI agent that answers calls, qualifies leads, and helps customers take the next step â€” 24 hours a day, 7 days a week.</p>
       </div>
       <div class="sol-card glass reveal d2">
         <div class="sol-num">03</div>
         <div class="sol-title">Booking System</div>
-        <p class="sol-desc-c">A simple way for customers to schedule without the endless back-and-forth — fewer missed opportunities, better experience.</p>
+        <p class="sol-desc-c">A simple way for customers to schedule without the endless back-and-forth â€” fewer missed opportunities, better experience.</p>
       </div>
       <div class="sol-card glass reveal d3">
         <div class="sol-num">04</div>
         <div class="sol-title">Automated Follow-Up</div>
-        <p class="sol-desc-c">Email, SMS, and voicemail follow-ups that keep leads moving toward a booking — while you focus on the actual work.</p>
+        <p class="sol-desc-c">Email, SMS, and voicemail follow-ups that keep leads moving toward a booking â€” while you focus on the actual work.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ HOW IT WORKS ═══ -->
+<!-- â•â•â• HOW IT WORKS â•â•â• -->
 <section id="how-it-works">
   <div class="cap">
     <div class="lbl reveal">The Process</div>
@@ -626,13 +626,13 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
       <div class="step reveal d3">
         <div class="step-num">04</div>
         <div class="step-title">Launch the System</div>
-        <p class="step-desc">Once approved, we build and connect the tools needed to improve your website, calls, booking, and follow-up — fast.</p>
+        <p class="step-desc">Once approved, we build and connect the tools needed to improve your website, calls, booking, and follow-up â€” fast.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ PRICING ═══ -->
+<!-- â•â•â• PRICING â•â•â• -->
 <section id="pricing">
   <div class="cap">
     <div class="price-head">
@@ -644,7 +644,7 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
         <div class="pc-tier">Starter</div>
         <div class="pc-name">Foundation</div>
         <div class="pc-price"><span class="pc-num">$200+</span><span class="pc-per">/mo</span></div>
-        <div class="pc-note">+ $500 one-time setup &nbsp;·&nbsp; Live in 48hrs</div>
+        <div class="pc-note">+ $500 one-time setup &nbsp;Â·&nbsp; Live in 48hrs</div>
         <hr class="pc-div"/>
         <ul class="pc-list">
           <li><span class="chk">+</span>High-converting website</li>
@@ -661,7 +661,7 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
         <div class="pc-tier">Growth</div>
         <div class="pc-name">Full System</div>
         <div class="pc-price"><span class="pc-num">$350+</span><span class="pc-per">/mo</span></div>
-        <div class="pc-note">+ $500 one-time setup &nbsp;·&nbsp; Live in 48hrs</div>
+        <div class="pc-note">+ $500 one-time setup &nbsp;Â·&nbsp; Live in 48hrs</div>
         <hr class="pc-div"/>
         <ul class="pc-list">
           <li><span class="chk">+</span>Everything in Starter</li>
@@ -677,7 +677,7 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
         <div class="pc-tier">Scale</div>
         <div class="pc-name">Full Stack</div>
         <div class="pc-price"><span class="pc-num">$650+</span><span class="pc-per">/mo</span></div>
-        <div class="pc-note">+ $500 one-time setup &nbsp;·&nbsp; Live in 48hrs</div>
+        <div class="pc-note">+ $500 one-time setup &nbsp;Â·&nbsp; Live in 48hrs</div>
         <hr class="pc-div"/>
         <ul class="pc-list">
           <li><span class="chk">+</span>Everything in Growth</li>
@@ -690,11 +690,11 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
         <button class="btn-plan-out open-form">Get My Free Plan</button>
       </div>
     </div>
-    <p style="text-align:center;margin-top:18px;font-size:.68rem;color:var(--fg-dim);letter-spacing:.12em">NO CONTRACTS &nbsp;·&nbsp; CANCEL ANYTIME &nbsp;·&nbsp; FREE PLAN INCLUDED</p>
+    <p style="text-align:center;margin-top:18px;font-size:.68rem;color:var(--fg-dim);letter-spacing:.12em">NO CONTRACTS &nbsp;Â·&nbsp; CANCEL ANYTIME &nbsp;Â·&nbsp; FREE PLAN INCLUDED</p>
   </div>
 </section>
 
-<!-- ═══ STATS ═══ -->
+<!-- â•â•â• STATS â•â•â• -->
 <section id="stats">
   <div class="stats-grid">
     <div class="stat-cell reveal">
@@ -706,57 +706,57 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
       <div class="stat-lbl">Monthly revenue lost to missed calls per location</div>
     </div>
     <div class="stat-cell reveal d2">
-      <div class="stat-num" data-count="3" data-sfx="×">0</div>
+      <div class="stat-num" data-count="3" data-sfx="Ã—">0</div>
       <div class="stat-lbl">More leads captured with automated follow-up</div>
     </div>
     <div class="stat-cell reveal d3">
       <div class="stat-num" data-count="24" data-sfx="/7">0</div>
-      <div class="stat-lbl">AI receptionist — always on, never misses a call</div>
+      <div class="stat-lbl">AI receptionist â€” always on, never misses a call</div>
     </div>
   </div>
 </section>
 
-<!-- ═══ PROBLEMS ═══ -->
+<!-- â•â•â• PROBLEMS â•â•â• -->
 <section id="problems">
   <div class="cap">
     <div class="prob-layout">
       <div class="prob-left">
         <div class="lbl reveal">The Problem</div>
         <h2 class="h2 reveal d1">Your business is losing leads before you ever speak to them.</h2>
-        <p class="prob-tagline reveal d2">Most service businesses aren't losing customers because of bad work — they're losing them because the systems between getting attention and booking a customer are broken or nonexistent.</p>
-        <div class="prob-close reveal d3">Digital Flow Global connects the gaps in your customer flow so fewer leads slip away — and the ones that do reach you are already qualified.</div>
+        <p class="prob-tagline reveal d2">Most service businesses aren't losing customers because of bad work â€” they're losing them because the systems between getting attention and booking a customer are broken or nonexistent.</p>
+        <div class="prob-close reveal d3">Digital Flow Global connects the gaps in your customer flow so fewer leads slip away â€” and the ones that do reach you are already qualified.</div>
       </div>
       <div class="prob-right reveal d1">
         <div class="prob-item">
           <div class="prob-icon"></div>
-          <p class="prob-text">Customers visit your site but can't figure out what to do — no clear next step, no booking option.</p>
+          <p class="prob-text">Customers visit your site but can't figure out what to do â€” no clear next step, no booking option.</p>
         </div>
         <div class="prob-item">
           <div class="prob-icon"></div>
-          <p class="prob-text">People call, nobody answers fast enough — so they move on to the next business on Google.</p>
+          <p class="prob-text">People call, nobody answers fast enough â€” so they move on to the next business on Google.</p>
         </div>
         <div class="prob-item">
           <div class="prob-icon"></div>
-          <p class="prob-text">Leads ask questions, then disappear — because follow-up is slow, manual, and easy to forget.</p>
+          <p class="prob-text">Leads ask questions, then disappear â€” because follow-up is slow, manual, and easy to forget.</p>
         </div>
         <div class="prob-item">
           <div class="prob-icon"></div>
-          <p class="prob-text">Booking takes too much back-and-forth — phone tags and DM threads that waste everyone's time.</p>
+          <p class="prob-text">Booking takes too much back-and-forth â€” phone tags and DM threads that waste everyone's time.</p>
         </div>
         <div class="prob-item">
           <div class="prob-icon"></div>
-          <p class="prob-text">You're spending hours on repetitive admin — answering the same questions, manually following up, chasing no-shows.</p>
+          <p class="prob-text">You're spending hours on repetitive admin â€” answering the same questions, manually following up, chasing no-shows.</p>
         </div>
         <div class="prob-item">
           <div class="prob-icon"></div>
-          <p class="prob-text">No automated way to qualify leads — so you spend time on the wrong conversations.</p>
+          <p class="prob-text">No automated way to qualify leads â€” so you spend time on the wrong conversations.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ SERVICES ═══ -->
+<!-- â•â•â• SERVICES â•â•â• -->
 <section id="services">
   <div class="cap">
     <div class="svc-head">
@@ -768,52 +768,52 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
     </div>
     <div class="svc-grid">
       <div class="svc-card glass reveal">
-        <div class="svc-tag">01 — Websites</div>
+        <div class="svc-tag">01 â€” Websites</div>
         <div class="svc-title">Websites That Convert</div>
         <p class="svc-body">Modern, mobile-first websites built to look professional, explain your offer, and turn visitors into leads and bookings.</p>
         <div class="svc-chips"><span class="chip">Mobile-first</span><span class="chip">Fast-loading</span><span class="chip">Booking-ready</span></div>
-        <span class="svc-arr">→</span>
+        <span class="svc-arr">â†’</span>
       </div>
       <div class="svc-card glass reveal d1">
-        <div class="svc-tag">02 — AI Receptionist</div>
+        <div class="svc-tag">02 â€” AI Receptionist</div>
         <div class="svc-title">AI Receptionists</div>
-        <p class="svc-body">AI phone agents that answer calls, handle FAQs, qualify leads, and push customers toward booking — without hiring more staff.</p>
+        <p class="svc-body">AI phone agents that answer calls, handle FAQs, qualify leads, and push customers toward booking â€” without hiring more staff.</p>
         <div class="svc-chips"><span class="chip">24/7</span><span class="chip">Lead qualify</span><span class="chip">Auto-book</span></div>
-        <span class="svc-arr">→</span>
+        <span class="svc-arr">â†’</span>
       </div>
       <div class="svc-card glass reveal d2">
-        <div class="svc-tag">03 — Booking</div>
+        <div class="svc-tag">03 â€” Booking</div>
         <div class="svc-title">Booking Automations</div>
         <p class="svc-body">Online scheduling flows that let customers book without waiting on a callback. Less back-and-forth, fewer missed opportunities.</p>
         <div class="svc-chips"><span class="chip">Calendar sync</span><span class="chip">Confirmations</span><span class="chip">Reminders</span></div>
-        <span class="svc-arr">→</span>
+        <span class="svc-arr">â†’</span>
       </div>
       <div class="svc-card glass reveal">
-        <div class="svc-tag">04 — Lead Forms</div>
+        <div class="svc-tag">04 â€” Lead Forms</div>
         <div class="svc-title">Lead Forms &amp; Intake</div>
-        <p class="svc-body">Custom intake forms that collect the right information upfront — so you understand the lead before you ever get on a call.</p>
+        <p class="svc-body">Custom intake forms that collect the right information upfront â€” so you understand the lead before you ever get on a call.</p>
         <div class="svc-chips"><span class="chip">Smart fields</span><span class="chip">CRM push</span><span class="chip">Qualify leads</span></div>
-        <span class="svc-arr">→</span>
+        <span class="svc-arr">â†’</span>
       </div>
       <div class="svc-card glass reveal d1">
-        <div class="svc-tag">05 — Follow-Up</div>
+        <div class="svc-tag">05 â€” Follow-Up</div>
         <div class="svc-title">Follow-Up Systems</div>
-        <p class="svc-body">Automated email, SMS, and voicemail sequences that keep your business in front of leads — without any manual outreach from you.</p>
+        <p class="svc-body">Automated email, SMS, and voicemail sequences that keep your business in front of leads â€” without any manual outreach from you.</p>
         <div class="svc-chips"><span class="chip">Email + SMS</span><span class="chip">Voicemail drop</span><span class="chip">Re-engage</span></div>
-        <span class="svc-arr">→</span>
+        <span class="svc-arr">â†’</span>
       </div>
       <div class="svc-card glass reveal d2">
-        <div class="svc-tag">06 — AI Automation</div>
+        <div class="svc-tag">06 â€” AI Automation</div>
         <div class="svc-title">Custom AI Workflows</div>
         <p class="svc-body">Connect your forms, CRM, email, SMS, calendar, and AI tools into one smooth system that cuts admin time and improves your speed to lead.</p>
         <div class="svc-chips"><span class="chip">n8n flows</span><span class="chip">CRM connect</span><span class="chip">Zero admin</span></div>
-        <span class="svc-arr">→</span>
+        <span class="svc-arr">â†’</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ TRUST STRIP ═══ -->
+<!-- â•â•â• TRUST STRIP â•â•â• -->
 <div id="trust">
   <div class="trust-grid">
     <div class="trust-item reveal">
@@ -864,13 +864,13 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
   </div>
 </div>
 
-<!-- ═══ AI AGENT CTA ═══ -->
+<!-- â•â•â• AI AGENT CTA â•â•â• -->
 <section id="ai-cta">
   <div class="ai-orb"></div>
   <div class="ai-cta-inner">
     <div class="lbl reveal" style="justify-content:center">Ready When You Are</div>
     <h2 class="ai-h reveal d1">Want to see what <em>AI</em> could fix in your business?</h2>
-    <p class="ai-p reveal d2">Answer a few questions or speak with our AI agent. We'll review your website, calls, booking, and follow-up — then send back a custom plan showing exactly where you're losing leads and how we'd fix it.</p>
+    <p class="ai-p reveal d2">Answer a few questions or speak with our AI agent. We'll review your website, calls, booking, and follow-up â€” then send back a custom plan showing exactly where you're losing leads and how we'd fix it.</p>
     <div class="ai-btns reveal d3">
       <button class="btn-primary open-form">
         Get My Free AI Growth Plan
@@ -909,7 +909,7 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
       </ul></div>
     </div>
     <div class="ft-bot">
-      <span class="ft-copy">© 2026 Digital Flow Global · All rights reserved</span>
+      <span class="ft-copy">Â© 2026 Digital Flow Global Â· All rights reserved</span>
       <span class="ft-copy">San Diego, California</span>
     </div>
     <div style="text-align:center;margin-top:28px">
@@ -922,10 +922,10 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
   </div>
 </footer>
 
-<!-- ═══ FORM MODAL ═══ -->
+<!-- â•â•â• FORM MODAL â•â•â• -->
 <div class="modal-backdrop" id="form-modal">
   <div class="modal-box">
-    <button class="modal-x" id="modal-x">✕</button>
+    <button class="modal-x" id="modal-x">âœ•</button>
     <div class="lbl" style="margin-bottom:10px">Free Custom Plan</div>
     <h2 class="modal-h">Get a Custom AI Growth Plan</h2>
     <p class="modal-sub">Answer a few quick questions. We'll review your setup and send back a custom plan showing where AI can help you capture more leads and cut manual work.</p>
@@ -956,7 +956,7 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
         <div class="f-radios">
           <label class="f-radio"><input type="radio" name="booking" value="yes"/> Yes</label>
           <label class="f-radio"><input type="radio" name="booking" value="sometimes"/> Sometimes</label>
-          <label class="f-radio"><input type="radio" name="booking" value="no"/> No — phone or text only</label>
+          <label class="f-radio"><input type="radio" name="booking" value="no"/> No â€” phone or text only</label>
         </div>
       </div>
       <div class="f-group"><label class="f-lbl">Do you miss calls or respond too slowly?</label>
@@ -988,28 +988,28 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
           <select class="f-select" name="timeline">
             <option value="" disabled selected>Select</option>
             <option>ASAP</option><option>This month</option>
-            <option>Next 1–3 months</option><option>Just researching</option>
+            <option>Next 1â€“3 months</option><option>Just researching</option>
           </select>
         </div>
         <div class="f-group"><label class="f-lbl">Budget range?</label>
           <select class="f-select" name="budget">
             <option value="" disabled selected>Select</option>
-            <option>Under $500</option><option>$500 – $1,000</option>
-            <option>$1,000 – $2,500</option><option>$2,500+</option>
+            <option>Under $500</option><option>$500 â€“ $1,000</option>
+            <option>$1,000 â€“ $2,500</option><option>$2,500+</option>
             <option>Not sure yet</option>
           </select>
         </div>
       </div>
-      <button type="submit" class="f-submit">Send My Info — Get My Free Plan →</button>
+      <button type="submit" class="f-submit">Send My Info â€” Get My Free Plan â†’</button>
       <p class="f-fine">No spam. No pressure. We'll send your custom plan within 24 hours.</p>
     </form>
   </div>
 </div>
 
-<!-- ═══ SCHEDULE MODAL ═══ -->
+<!-- â•â•â• SCHEDULE MODAL â•â•â• -->
 <div class="modal-backdrop" id="sched-modal">
   <div class="modal-box" style="max-width:560px">
-    <button class="modal-x" id="sched-modal-x">✕</button>
+    <button class="modal-x" id="sched-modal-x">âœ•</button>
     <div id="sched-form-wrap">
       <div class="lbl" style="margin-bottom:10px">Book a Call</div>
       <h2 class="modal-h">Schedule a Free Strategy Call</h2>
@@ -1029,42 +1029,42 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
           <div class="f-group"><label class="f-lbl" for="sc-email">Email</label><input class="f-input" id="sc-email" name="email" type="email" placeholder="you@business.com"/></div>
         </div>
         <div class="f-group"><label class="f-lbl" for="sc-note">Anything we should know?</label><textarea class="f-textarea" id="sc-note" name="notes" placeholder="e.g. I'm missing a lot of calls, need online booking..."></textarea></div>
-        <button type="submit" class="f-submit" id="sched-submit-btn">Confirm My Call →</button>
+        <button type="submit" class="f-submit" id="sched-submit-btn">Confirm My Call â†’</button>
         <p class="f-fine">We'll send a confirmation and call you at your scheduled time.</p>
       </form>
     </div>
     <div class="sched-success" id="sched-success">
-      <div class="chk-circle">✓</div>
+      <div class="chk-circle">âœ“</div>
       <h3>You're booked!</h3>
-      <p id="sched-confirm-text">We'll call you on <strong id="sched-confirm-dt"></strong>.<br/>Check your phone — we'll reach out right on time.</p>
+      <p id="sched-confirm-text">We'll call you on <strong id="sched-confirm-dt"></strong>.<br/>Check your phone â€” we'll reach out right on time.</p>
     </div>
   </div>
 </div>
 
 <script>
-/* ══ CURSOR ══ */
+/* â•â• CURSOR â•â• */
 const C=document.getElementById('cur'),C2=document.getElementById('cur2');
 let mx=-200,my=-200,rx=-200,ry=-200;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
 (function lp(){C.style.left=mx+'px';C.style.top=my+'px';rx+=(mx-rx)*.11;ry+=(my-ry)*.11;C2.style.left=rx+'px';C2.style.top=ry+'px';requestAnimationFrame(lp)})();
 
-/* ══ PRELOADER ══ */
+/* â•â• PRELOADER â•â• */
 (function(){
   const pct=document.getElementById('lpct'),bar=document.getElementById('lbar'),el=document.getElementById('loader');
   let n=0;const iv=setInterval(()=>{n++;pct.textContent=String(n).padStart(3,'0');bar.style.width=n+'%';if(n>=100){clearInterval(iv);setTimeout(()=>{el.classList.add('out');document.body.classList.remove('loading')},280)}},15);
 })();
 
-/* ══ NAV scroll ══ */
+/* â•â• NAV scroll â•â• */
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',scrollY>60)},{passive:true});
 
-/* ══ HERO FX CANVAS ══ */
+/* â•â• HERO FX CANVAS â•â• */
 (function(){
   const cv=document.getElementById('fx-canvas'),ctx=cv.getContext('2d');
   const DPR=Math.min(window.devicePixelRatio||1,2);
   let W,H;
   const wins=[];
 
-  // City zone — building band (34%–68%), 8% left margin clears nav logo
+  // City zone â€” building band (34%â€“68%), 8% left margin clears nav logo
   function zone(){return{x:W*.08,y:H*.34,w:W*.84,h:H*.34}}
 
   function buildWins(){
@@ -1083,7 +1083,7 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
     }
   }
 
-  // ── Shooting stars (sky only: y 0→38%) ──
+  // â”€â”€ Shooting stars (sky only: y 0â†’38%) â”€â”€
   const STAR_MAX=10;
   const stars=[];
   function spawnStar(){
@@ -1107,7 +1107,7 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
   }
   for(let i=0;i<STAR_MAX;i++) setTimeout(()=>spawnStar(), i*1000+Math.random()*800);
 
-  // ── Network nodes ──
+  // â”€â”€ Network nodes â”€â”€
   const NODE_COUNT=55;
   const CONNECT_DIST=160;
   const nodes=[];
@@ -1132,7 +1132,7 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
   window.addEventListener('resize',resize,{passive:true});resize();
 
   function drawStars(){
-    // Sky clip: above city (0 → H*0.38), full width
+    // Sky clip: above city (0 â†’ H*0.38), full width
     ctx.save();
     ctx.beginPath();
     ctx.rect(0,0,W,H*.38);
@@ -1217,9 +1217,9 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
 })();
 
 
-/* ══ SCHEDULE MODAL ══ */
+/* â•â• SCHEDULE MODAL â•â• */
 (function(){
-  // ── Paste your n8n/Make webhook URL here ──
+  // â”€â”€ Paste your n8n/Make webhook URL here â”€â”€
   const WEBHOOK_URL = '';
   const NOTIFY_PHONE = '+16193405615';
 
@@ -1321,7 +1321,7 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
     existing.unshift({ id: Date.now(), ...data });
     localStorage.setItem('dfg-bookings', JSON.stringify(existing));
 
-    // Fire webhook → triggers Twilio SMS to you
+    // Fire webhook â†’ triggers Twilio SMS to you
     if(WEBHOOK_URL){
       try {
         await fetch(WEBHOOK_URL, {
@@ -1329,7 +1329,7 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             ...data,
-            message: `📅 NEW CALL BOOKED\n${data.name} (${data.business})\n📞 ${data.phone}\n📧 ${data.email}\n🗓 ${data.date} at ${data.time}\nNotes: ${data.notes || 'None'}`
+            message: `ðŸ“… NEW CALL BOOKED\n${data.name} (${data.business})\nðŸ“ž ${data.phone}\nðŸ“§ ${data.email}\nðŸ—“ ${data.date} at ${data.time}\nNotes: ${data.notes || 'None'}`
           })
         });
       } catch(err){ console.warn('Webhook failed:', err); }
@@ -1339,11 +1339,11 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
     confirmDt.textContent = `${selectedDay} at ${selectedTime}`;
     formWrap.style.display = 'none';
     successEl.style.display = 'block';
-    btn.textContent = 'Confirm My Call →'; btn.disabled = false;
+    btn.textContent = 'Confirm My Call â†’'; btn.disabled = false;
   });
 })();
 
-/* ══ MARQUEE ══ */
+/* â•â• MARQUEE â•â• */
 (function(){
   const items=[
     {t:'AI Receptionists',h:true},{t:'Websites That Convert',h:false},
@@ -1358,13 +1358,13 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
   mq.innerHTML=html+html;
 })();
 
-/* ══ SCROLL REVEAL ══ */
+/* â•â• SCROLL REVEAL â•â• */
 (function(){
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 })();
 
-/* ══ STAT COUNTERS ══ */
+/* â•â• STAT COUNTERS â•â• */
 (function(){
   const io=new IntersectionObserver(es=>{
     es.forEach(e=>{
@@ -1378,12 +1378,12 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
   document.querySelectorAll('.stat-num[data-count]').forEach(el=>io.observe(el));
 })();
 
-/* ══ SERVICE CARD MOUSE SPOTLIGHT ══ */
+/* â•â• SERVICE CARD MOUSE SPOTLIGHT â•â• */
 document.querySelectorAll('.svc-card').forEach(el=>{
   el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect();el.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');el.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%')});
 });
 
-/* ══ MODAL ══ */
+/* â•â• MODAL â•â• */
 (function(){
   const modal=document.getElementById('form-modal');
   const open=()=>{modal.classList.add('open');document.body.style.overflow='hidden'};
