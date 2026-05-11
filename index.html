@@ -453,19 +453,22 @@ footer{background:rgba(4,5,14,.95);border-top:1px solid var(--border);padding:60
   .nav-brand{font-size:.68rem;letter-spacing:.06em}
   .nav-cta{padding:8px 14px;font-size:.62rem;letter-spacing:.08em}
 
-  /* Hero â€” full screen fill */
+  /* Hero â€” full screen fill (portrait) */
   #hero{
-    height:100dvh;
-    height:100svh; /* fallback for older mobile browsers */
-    min-height:100vh;
+    height:100vh;       /* base fallback */
+    height:100svh;      /* fallback: visible area with chrome */
+    height:100dvh;      /* ideal: dynamic, adjusts as chrome shows/hides */
+    min-height:0;
   }
   #hero-photo{display:none}
   #hero-photo-mobile{
     display:block;
-    object-fit:cover;
-    object-position:center center;
+    position:absolute;
+    inset:0;
     width:100%;
     height:100%;
+    object-fit:cover;
+    object-position:center 60%;
   }
 
   /* Hero content â€” centered, full width */
