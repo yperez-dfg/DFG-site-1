@@ -1208,8 +1208,7 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
 
   function draw(){
     ctx.clearRect(0,0,W,H);
-    drawNodes();
-    drawStars();
+    if(!isMobile){drawNodes();drawStars();}
     requestAnimationFrame(draw);
   }
   requestAnimationFrame(draw);
